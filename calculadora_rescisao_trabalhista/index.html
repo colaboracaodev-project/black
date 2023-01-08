@@ -2,49 +2,37 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./style.css">
-  <title>Calculadora Recisão Trabalhista</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de Rescisão Trabalhista</title>
 </head>
-
 <body>
-  <div>
-    <h1>Calculadora de Rescisão Trabalhista</h1>
-    <form>
-      <div class="inputs">
-        <div>
-          <label for="salario">Salário</label>
-          <input type="text" id="salario" placeholder="R$ 0,00">
-        </div>
-        <div>
-          <label for="mesesTrabalhdosAno">Meses trabalhados no ano</label>
-          <input type="text" id="mesesTrabalhadosAno" placeholder="Quantidade de meses">
-        </div>
-        <div>
-          <label for="diasTrabalhadosMes">Dias trabalhados no Mês</label>
-          <input type="text" id="diasTrabalhadosMes" placeholder="Quantidade de dias">
-        </div>
-        <div>
-          <label for="tempoTotalMes">Tempo Total em Meses</label>
-          <input type="text" id="tempoTotalMes" placeholder="Total em meses">
-        </div>
-      </div>
+  <header>
+    <main>
+      <form id="form">
+        <h1>Calculadora de Rescisão Trabalhista</h1>
+  
+        <label for="salario">Salário atual:</label>
+        <input type="number" placeholder="0,00" id="salario" required>
+  
+        <label for="dias-trabalhados">Dias trabalhados no mês:</label>
+        <input type="number" id="dias-trabalhados" placeholder="Dias trabalhados no mês da recisão" required>
+  
+        <label for="meses-trabalhados-ano">Meses trabalhados no ano:</label>
+        <input type="number" id="meses-trabalhados-ano" placeholder="Meses trabalhados no ano da recisão" required>
+  
+        <label for="total-de-meses-trabalhados">Tempo total de trabalho em meses:</label>
+        <input type="number" id="total-de-meses-trabalhados" placeholder="Tempo total trabalhado na empresa em meses" required>
+  
+        <button type="button" id="botao" onclick="manipulaDOM()">Calcular</button>
 
-      <div>
-        <div>
-          <h3>Resultado</h3>
-          <p>Total: R$ <span id="resultado">0,00</span></p>
-        </div>
-        <button>Calcular</button>
-      </div>
-    </form>
-  </div>
+        <p class="display">R$ <span id="resultado"></span></p>
+      </form>
+    </main>
+  </header>
+  <script src="./script.js"></script>
 </body>
 
 </html>
