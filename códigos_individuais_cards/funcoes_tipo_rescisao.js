@@ -34,21 +34,37 @@ console.log(`Demissão sem Justa Causa R$ ${calculaDemissaoSemJustaCausa()}`);
 // saldo de salários;
 // férias vencidas, acrescidas de 1/3.
 
-function calculaDemissaoSemJustaCausa() {
+function calculaDemissaoPorJustaCausa() {
     
     let saldoSalario = calculaSaldoSalario(salario, diasMes);
     let feriasVencidas = calculaFeriasVencidas(salario);
 
     let demissaoSemJustaCausa = saldoSalario + feriasVencidas;
 
-    return demissaoSemJustaCausa;
+    return demissaoSemJustaCausa.toFixed(2);
 }
+
+console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
 
 // - Pedido de demissão
 // saldo de salário;
 // 13ª terceiro salário proporcional;
 // férias vencidas, acrescidas do adicional de 1/3;
 // férias proporcionais, acrescidas do adicional de 1/3.
+
+function calculaPedidoDeDemissao() {
+
+    let saldoSalario = calculaSaldoSalario(salario, diasMes);
+    let decimoTerceiroProporcional = calculaDecimoTerceiroProporcional(salario, mesesAno);
+    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
+
+    let pedidoDeDemissao = saldoSalario + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais;
+
+    return pedidoDeDemissao.toFixed(2);
+}
+
+console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
 
 // - Rescisão por culpa recíproca
 // saldo de salário;
@@ -58,6 +74,22 @@ function calculaDemissaoSemJustaCausa() {
 // metade das férias proporcionais, acrescidas de 1/3;
 // indenização de 20% dos depósitos do FGTS.
 
+function calculaRescisaoPorCulpaReciproca() {
+
+    let saldoSalario = calculaSaldoSalario(salario, diasMes);
+    let avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
+    let decimoTerceiroProporcional = (calculaDecimoTerceiroProporcional(salario, mesesAno) / 2);
+    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasProporcionais = (calculaFeriasProporcionais(mesesAno, feriasVencidas) / 2);
+    let multaRescisoria = (calculaMultaRescisoria(salario, totalDeMesesTrabalhados) / 5);
+
+    let rescisaoPorCulpaReciproca = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
+
+    return rescisaoPorCulpaReciproca.toFixed(2);
+}
+
+console.log(`Rescisão por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
+
 // - Demissão por comum acordo
 // saldo de salário;
 // metade do aviso prévio;
@@ -65,6 +97,22 @@ function calculaDemissaoSemJustaCausa() {
 // férias vencidas, acrescidas de 1/3;
 // férias proporcionais, acrescidas de 1/3;
 // multa de 20% do FGTS.
+
+function calculaDemissaoPorComumAcordo() {
+
+    let saldoSalario = calculaSaldoSalario(salario, diasMes);
+    let avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
+    let decimoTerceiroProporcional = calculaDecimoTerceiroProporcional(salario, mesesAno);
+    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
+    let multaRescisoria = (calculaMultaRescisoria(salario, totalDeMesesTrabalhados) / 5);
+
+    let demissaoPorComumAcordo = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
+
+    return demissaoPorComumAcordo.toFixed(2);
+}
+
+console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
 
 
 // funções auxiliares
