@@ -3,6 +3,8 @@ const salario = 4700;
 const diasMes = 20;
 const mesesAno = 10;
 const totalDeMesesTrabalhados = 30;
+const recebeAvisoPrevioIndenizado = true;
+const possuiFeriasVencidas = true;
 
 // Regras:
 
@@ -17,11 +19,19 @@ const totalDeMesesTrabalhados = 30;
 function calculaDemissaoSemJustaCausa() {
 
     let saldoSalario = calculaSaldoSalario(salario, diasMes);
-    let avisoPrevioIndenizado = calculaAvisoPrevioIndenizado(salario);
+    let avisoPrevioIndenizado = 0;
     let decimoTerceiroProporcional = calculaDecimoTerceiroProporcional(salario, mesesAno);
-    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasVencidas = 0;
     let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
     let multaRescisoria = calculaMultaRescisoria(salario, totalDeMesesTrabalhados);
+
+    if(recebeAvisoPrevioIndenizado) {
+        avisoPrevioIndenizado = calculaAvisoPrevioIndenizado(salario);
+    }
+
+    if(possuiFeriasVencidas) {
+        feriasVencidas = calculaFeriasVencidas(salario);
+    }
 
     let demissaoSemJustaCausa = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
 
@@ -44,7 +54,7 @@ function calculaDemissaoPorJustaCausa() {
     return demissaoSemJustaCausa.toFixed(2);
 }
 
-console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
+// console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
 
 // - Pedido de demissão
 // saldo de salário;
@@ -64,7 +74,7 @@ function calculaPedidoDeDemissao() {
     return pedidoDeDemissao.toFixed(2);
 }
 
-console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
+// console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
 
 // - Rescisão por culpa recíproca
 // saldo de salário;
@@ -88,7 +98,7 @@ function calculaRescisaoPorCulpaReciproca() {
     return rescisaoPorCulpaReciproca.toFixed(2);
 }
 
-console.log(`Rescisão por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
+// console.log(`Rescisão por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
 
 // - Demissão por comum acordo
 // saldo de salário;
@@ -112,7 +122,7 @@ function calculaDemissaoPorComumAcordo() {
     return demissaoPorComumAcordo.toFixed(2);
 }
 
-console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
+// console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
 
 
 // funções auxiliares
