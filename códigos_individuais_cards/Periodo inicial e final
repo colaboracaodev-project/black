@@ -1,0 +1,5 @@
+<label for="inicio_trabalho">Comecei a Trabalhar em:</label>
+<input type="date" id="inicio_trabalho"  required>
+
+<label for="Fim_trabalho">Meu último dia foi:</label>
+<input type="date" id="Fim_trabalho"  required>
