@@ -1,4 +1,4 @@
-function calculartotaldemeses() {
+function calculatotaldemeses() {
         // Obtém as duas datas do formulário
         var dataInicial = new Date(document.getElementById("inicio_trabalho").value);
         var dataFinal = new Date(document.getElementById("Fim_trabalho").value);
