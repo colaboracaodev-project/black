@@ -6,7 +6,7 @@ const totalDeMesesTrabalhados = 30;
 const recebeAvisoPrevioIndenizado = true;
 const possuiFeriasVencidas = true;
 
-// Regras:
+// Regras das funções:
 
 // - Demissão sem justa causa
 // saldo de salário;
