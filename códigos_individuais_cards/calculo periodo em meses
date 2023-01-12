@@ -15,3 +15,24 @@ function calculatotaldemeses() {
         // Atualiza o campo de formulário com o resultado
         document.getElementById("total-de-meses-trabalhados").value = meses;
        }
+       
+       ou
+       
+       
+       function calculatotaldemeses() {
+        // Obtém as duas datas do formulário
+        var dataInicial = new Date(document.getElementById("inicio_trabalho").value);
+        var dataFinal = new Date(document.getElementById("Fim_trabalho").value);
+
+        // em dias
+        var dias = (dataFinal.getTime() - dataInicial.getTime()) / (1000*3600*24);
+
+        // em meses
+        var meses = dias / (30);
+
+        meses = Math.floor(meses);
+
+        document.getElementById("total-de-meses-trabalhados").velue = meses;
+
+       }
+
