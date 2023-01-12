@@ -4,7 +4,7 @@ function calculatotaldemeses() {
         var dataFinal = new Date(document.getElementById("Fim_trabalho").value);
        
         // Calcula a diferença em milissegundos
-        var diferenca = dataFinal.getTime - dataInicial.getTime;
+        var diferenca = dataFinal - dataInicial;
        
         // Calcula o número de meses
         var meses = diferenca / (1000 * 60 * 60 * 24 * 30);
