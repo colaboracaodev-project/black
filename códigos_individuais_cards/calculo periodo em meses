@@ -1,3 +1,18 @@
+function calculatotaldemeses(){
+        
+            var inicio_trabalho = document.getElementById("inicio_trabalho").value;
+            var Fim_trabalho = document.getElementById("Fim_trabalho").value;
+            
+            var data1 = new Date(inicio_trabalho);
+            var data2 = new Date(new Date(Fim_trabalho));
+            var total = (data2.getFullYear() - data1.getFullYear())*12 + (data2.getMonth() - data1.getMonth());
+            document.getElementById("calculo-total-de-meses-trabalhados").value = total;
+            }
+            
+            
+            ou
+            
+            
 function calculatotaldemeses() {
         // Obtém as duas datas do formulário
         var dataInicial = new Date(document.getElementById("inicio_trabalho").value);
