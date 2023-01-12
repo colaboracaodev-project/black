@@ -30,8 +30,10 @@ function calculatotaldemeses() {
         // em meses
         var meses = dias / (30);
 
+        // Arredonda para baixo
         meses = Math.floor(meses);
 
+        // Atualiza o campo de formulário com o resultado
         document.getElementById("total-de-meses-trabalhados").velue = meses;
 
        }
