@@ -1,55 +1,11 @@
-function calculatotaldemeses(){
-        
-            var inicio_trabalho = document.getElementById("inicio_trabalho").value;
-            var Fim_trabalho = document.getElementById("Fim_trabalho").value;
-            
-            var data1 = new Date(inicio_trabalho);
-            var data2 = new Date(new Date(Fim_trabalho));
-            var total = (data2.getFullYear() - data1.getFullYear())*12 + (data2.getMonth() - data1.getMonth());
-            document.getElementById("calculo-total-de-meses-trabalhados").value = total;
-            }
-            
-            
-            ou
-            
-            
-function calculatotaldemeses() {
-        // Obtém as duas datas do formulário
-        var dataInicial = new Date(document.getElementById("inicio_trabalho").value);
-        var dataFinal = new Date(document.getElementById("Fim_trabalho").value);
-       
-        // Calcula a diferença em milissegundos
-        var diferenca = dataFinal - dataInicial;
-       
-        // Calcula o número de meses
-        var meses = diferenca / (1000 * 60 * 60 * 24 * 30);
-       
-        // Arredonda para baixo
-        meses = Math.floor(meses);
-       
-        // Atualiza o campo de formulário com o resultado
-        document.getElementById("total-de-meses-trabalhados").value = meses;
-       }
-       
-       ou
-       
-       
-       function calculatotaldemeses() {
-        // Obtém as duas datas do formulário
-        var dataInicial = new Date(document.getElementById("inicio_trabalho").value);
-        var dataFinal = new Date(document.getElementById("Fim_trabalho").value);
+function calcular(inicio_trabalho, fim_trabalho){
+    var dt1 = document.getElementById("inicio_trabalho").value; //Pega as datas do formulário
+    var dt2 = document.getElementById("fim_trabalho").value; //pega a data do formulário
 
-        // em dias
-        var dias = (dataFinal.getTime() - dataInicial.getTime()) / (1000*3600*24);
+    var data1 = new Date(dt1); // converte para o tipo date que o Javascript entende
+    var data2 = new Date(new Date(dt2)); // //converte
 
-        // em meses
-        var meses = dias / (30);
+    var total = (data2.getFullYear() - data1.getFullYear())*12 + (data2.getMonth() - data1.getMonth()); // realiza o calculo
 
-        // Arredonda para baixo
-        meses = Math.floor(meses);
-
-        // Atualiza o campo de formulário com o resultado
-        document.getElementById("total-de-meses-trabalhados").velue = meses;
-
-       }
-
+    document.getElementById("result").value = total; // coloca de volta no formulário
+}
