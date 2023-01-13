@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter');
+
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    height: 69.4px;
+    width: 128px;
+    margin-top: 11px;
+}
+
+h1{
+    font-family: 'Inter';
+    color: white;
+    padding-left: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.subtitulo-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+button{
+    width: 126px;
+    height: 56px;
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+h3{
+    font-size: 32px;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+.subtitulo-2{
+    display: flex;
+    justify-content: center;
+}
+
+.mat{
+    width: 26.32px;
+    height: 26.32px;
+}
+
+h2{
+    color: white;
+    margin-top: -1px;
+    margin-left: 15px;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+
+.dados{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.valorSalario{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.inicioTrabalho{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.fimTrabalho{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: white;
+    background-color: #1C1C1E;
+    height: 50px;
+    width: 250px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    background-color: #1C1C1E;
+    border: none;
+    height: 50px;   
+}
+
+::placeholder{
+    text-align: center;
+    color: white;
+}
+

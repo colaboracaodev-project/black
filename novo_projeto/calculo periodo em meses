@@ -9,3 +9,5 @@ function calcular(inicio_trabalho, fim_trabalho){
 
     document.getElementById("total-de-meses-trabalhados").value = total; // coloca de volta no formulário
 }
+
+
