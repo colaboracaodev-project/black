@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboração-DEV-Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="titulo">
+            <img src="img/logo.png" alt="logo colaboração dev" class="logo">
+            <h1>Colaboração DEV</h1>
+        </div>
+
+        <div class="subtitulo-1">
+            <h3>Team <span>Black</span> </h3>
+        </div>
+
+        <div class="subtitulo-2">
+            <img src="img/simbolosMatematicos.png" alt="simbolos matemáticos" class="mat">
+            <h2>Calculadora de rescisão trabalhista</h2>
+        </div>
+
+        <div class="dados">
+            <div class="verifica">
+                <label for="valorSalario">Valor do meu último salário</label>
+                <input type="number" class="digite" name="valorSalario" placeholder="R$ 0.000,00">
+                <div class="blue"></div>
+            </div>
+
+            <div class="verifica">
+                <label for="inicioTrabalho">Comecei a trabalhar em</label>
+                <input type="date" class="digite" name="inicioTrabalho" placeholder="DD/MM/AAAA" >
+                <div class="blue"></div>
+            </div>
+
+            <div class="verifica">
+                <label for="fimTrabalho">Meu último dia foi</label>
+                <input type="date" class="digite" name="fimTrabalho" placeholder="DD/MM/AAAA" >
+                <div class="blue"></div>
+            </div>
+        </div>
+
+        <div class="dadosComplementares">
+            <div class="dadosComplementares1">
+                <label class="verificaFerias">Tenho férias vencidas</label>
+                <div class="ferias">
+                    <div class="selecionaOpcao">
+                        <input type="radio" name="ferias-vencidas" id="feriasNaoVencidas"> 
+                        <div class="nao">Não</div>
+                    </div>
+                    <div class="selecionaOpcao">
+                        <input type="radio" name="ferias-vencidas" id="feriasVencidas">
+                        <div class="sim">Sim</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dadosComplementares1">
+                <label class="verificaFerias">Trabalhei no aviso prévio</label>
+                <div class="ferias">
+                    <div class="selecionaOpcao">
+                        <input type="radio" name="ferias-vencidas" id="feriasNaoVencidas"> 
+                        <div class="nao">Não</div>
+                    </div>
+                    <div class="selecionaOpcao">
+                        <input type="radio" name="ferias-vencidas" id="feriasVencidas">
+                        <div class="sim">Sim</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dadosComplementares1">
+                <p>Motivo da rescisão</p>
+                <div class="dadosComplementares3">
+                    <div class="rescisao">
+                        <div class="tipoRescisao">
+                            <input type="radio" name="motivo-rescisao" id="sem-justa-causa">
+                            <label for="sem-justa-causa">Demissão sem justa causa</label>
+                        </div>
+                        <div class="tipoRescisao">
+                            <input type="radio" name="motivo-rescisao" id="sem-justa-causa">
+                            <label for="sem-justa-causa">Demissão sem justa causa</label>
+                        </div>
+                        <div class="tipoRescisao">
+                            <input type="radio" name="motivo-rescisao" id="pedido-de-demissao">
+                            <label for="pedido-de-demissao">Pedido de demissão</label>
+                        </div>
+                        <div class="tipoRescisao">
+                            <input type="radio" name="motivo-rescisao" id="reciproca">
+                            <label for="reciproca">Recisão recíproca</label>
+                        </div>
+                        <div class="tipoRescisao">
+                            <input type="radio" name="motivo-rescisao" id="acordo">
+                            <label for="acordo">Demissão comum acordo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="botao">
+            <button type="button" class="novoCalculo botoes">Novo Cálculo</button>
+            <button type="button" class="calculaRescisao botoes">Calcular minha rescisão</button>  
+        </div>
+    </main>
+
+</body>
+</html>

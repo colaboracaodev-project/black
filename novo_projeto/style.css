@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter');
+
+
+body{
+    background-color: #0e0e0f;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    max-width: 1072px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    height: 69.4px;
+    width: 128px;
+    margin-top: 11px;
+}
+
+h1{
+    font-family: 'Inter';
+    color: white;
+    padding-left: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.subtitulo-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+span{
+    width: 126px;
+    height: 56px;
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+h3{
+    font-size: 32px;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+.subtitulo-2{
+    display: flex;
+    justify-content: center;
+}
+
+.mat{
+    width: 26.32px;
+    height: 26.32px;
+}
+
+h2{
+    color: white;
+    margin-top: -1px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+.dados{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Inter';
+}
+
+.verifica{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #1C1C1E;
+    height: 126px;
+    width: 320px;
+}
+
+label, p{
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.digite{
+    display: flex;
+    background-color: #1C1C1E;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter';
+    text-align: center;
+    margin-top: 5px;
+}
+
+::placeholder{
+    color: white;
+    font-family: 'Inter';
+    font-size: 20px;    
+}
+
+.blue{
+    display: flex;
+    border-top: solid 5px #3F46D2;
+    width: 150px;
+    margin-right: 22px;
+    margin-top: 5px;
+}
+
+.dadosComplementares{
+    margin-top: 30px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Inter';
+}
+
+.dadosComplementares1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #1C1C1E;
+    width: 320px;
+    height: 350px;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.verificaFerias{
+    margin-top: -30px;
+}
+
+.ferias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.selecionaOpcao{
+    display: flex;
+    flex-direction: row;
+    width: 90px;
+}
+
+.selecionaOpcao input{
+    height: 24px;
+    width: 24px;
+}
+
+.nao{
+    color: white;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.sim{
+    color: white;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.rescisao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tipoRescisao{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    padding-left: 10px;
+    line-height: 10px;
+}
+
+.tipoRescisao input{
+    height: 24px;
+    width: 24px;
+    margin-top: 9px;
+    margin-right: 10px;
+    padding-left: 20px;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 16px;
+}
+
+.botoes{
+    background-color: #3F46D2;
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    height: 40px;
+}
+
+/*RESPONSIVO*/
+
+@media(max-width: 1200px){
+
+    main{
+        display: flex;
+        justify-content: center ;
+        margin: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titulo{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .logo{
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    .subtitulo-1{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    .subtitulo-1 span{
+        height: 25%;
+        width: 25%;
+        font-size: 15px;
+    }
+    
+    .dados, .dadosComplementares{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        justify-content: center;
+    }
+}
+
+@media(max-width:400px{
+
+})
+
