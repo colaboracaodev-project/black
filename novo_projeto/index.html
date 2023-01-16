@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colaboração-DEV-Calculadora</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Calculadora de Rescisão Trabalhista</title>
 </head>
+
 <body>
+  <header>
     <main>
-        <div class="titulo">
-            <img src="img/logo.png" alt="logo colaboração dev" class="logo">
-            <h1>Colaboração DEV</h1>
+      <form id="form">
+        <h1>Calculadora de Rescisão Trabalhista</h1>
+
+        <label for="salario">Salário atual:</label>
+        <input type="number" placeholder="0,00" id="salario" required>
+
+        <label for="dias-trabalhados">Dias trabalhados no mês:</label>
+        <input type="number" id="dias-trabalhados" placeholder="Dias trabalhados no mês da recisão" required>
+
+        <label for="meses-trabalhados-ano">Meses trabalhados no ano:</label>
+        <input type="number" id="meses-trabalhados-ano" placeholder="Meses trabalhados no ano da recisão" required>
+
+        <label for="total-de-meses-trabalhados">Tempo total de trabalho em meses:</label>
+        <input type="number" id="total-de-meses-trabalhados" placeholder="Tempo total trabalhado na empresa em meses"
+          required>
+
+        <button type="button" id="botao" onclick="manipulaDOM()">Calcular</button>
+
+        <!-- <p class="display">R$ <span id="resultado"></span></p> -->
+
+        Total
+        Saldo Salário
+        Decimo Terceiro Proporcional
+        Ferias Vencidas
+        Ferias Proporcionais
+        >Aviso Previo Indenizado
+        Multa Rescisoria
         </div>
-
-        <div class="subtitulo-1">
-            <h3>Team <button>Black</button> </h3>
-        </div>
-
-        <div class="subtitulo-2">
-            <img src="img/simbolosMatematicos.png" alt="simbolos matemáticos" class="mat">
-            <h2>Calculadora de rescisão trabalhista </h2>
-        </div>
-
-        <div class="dados">
-            <div class="valorSalario">
-                <label for="valorSalario">Valor do meu último salário</label>
-                <input type="number" name="valorSalario" placeholder="R$ 0.000,00">
-            </div>
-
-            <div class="inicioTrabalho">
-                <label for="valorSalario">Valor do meu último salário</label>
-                <input type="number" name="valorSalario" placeholder="R$ 0.000,00">
-            </div>
-
-            <div class="fimTrabalho">
-                <label for="valorSalario">Valor do meu último salário</label>
-                <input type="number" name="valorSalario" placeholder="R$ 0.000,00">
-            </div>
-        </div>
+      </form>
     </main>
-    
+  </header>
+  <script src="./script.js"></script>
 </body>
+
 </html>

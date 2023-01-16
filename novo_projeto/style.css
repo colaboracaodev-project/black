@@ -1,122 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter');
+@import url("../css/reset.css");
 
-
-body{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.titulo{
-    display: flex;
-    justify-content: center;
+body {
+  background-image: linear-gradient(45deg, black, gray);
+  height: 100vh;
 }
 
-.logo{
-    height: 69.4px;
-    width: 128px;
-    margin-top: 11px;
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40vw;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  box-shadow: 5px 5px 15px 5px #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
 }
 
-h1{
-    font-family: 'Inter';
-    color: white;
-    padding-left: 40px;
-    font-size: 40px;
-    font-weight: 700;
-    margin-top: 20px;
+#form h1 {
+  text-align: center;
 }
 
-.subtitulo-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -30px;
+input {
+  padding: .5rem 1rem;
+  font-size: 1rem;
 }
 
-button{
-    width: 126px;
-    height: 56px;
-    background-color: black;
-    color: white;
-    border: solid 2px white;
-    border-radius: 50px;
-    padding: 16px 32px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
+#botao {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 250px;
+  margin: auto;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: .5rem;
 }
 
-h3{
-    font-size: 32px;
-    color: white;
-    font-family: 'Inter';
-    font-weight: 500;
+#botao:hover {
+  background-color: black;
+  color: white;
 }
 
-.subtitulo-2{
-    display: flex;
-    justify-content: center;
+.display {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.mat{
-    width: 26.32px;
-    height: 26.32px;
+.resultado {
+  width: 40%;
+  height: 3rem;
+  background-color: black;
 }
 
-h2{
-    color: white;
-    margin-top: -1px;
-    margin-left: 15px;
-    font-family: 'Inter';
-    font-weight: 600;
+.resultado_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
-
-.dados{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.valorSalario{
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
-}
-
-.inicioTrabalho{
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
-}
-
-.fimTrabalho{
-    display: flex;
-    flex-direction: column;
-}
-label{
-    color: white;
-    background-color: #1C1C1E;
-    height: 50px;
-    width: 250px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-input{
-    background-color: #1C1C1E;
-    border: none;
-    height: 50px;   
-}
-
-::placeholder{
-    text-align: center;
-    color: white;
-}
-
