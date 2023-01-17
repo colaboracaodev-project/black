@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./nao_mexer_style.css">
+  <title>Calculadora de Rescisão Trabalhista</title>
+</head>
+
+<body>
+  <header class="header_container">
+    <div class="cabecalho">
+      <img src="./img/colaboracao dev 1.svg" alt="logo do projeto colaboração dev" class="logo">
+      <h2>Colaboração DEV</h2>
+    </div>
+    <div class="team">
+      <p>Team <span>Black</span></p>
+      <h1>Calculadora de Rescisão Trabalhista</h1>
+    </div>
+    <main>
+      <form id="form">
+
+        <div class="form_input_container">
+          <div class="inputs">
+            <h3>Salário atual:</h3>
+            <input type="number" id="salario" placeholder="0,00" required>
+          </div>
+
+          <div class="inputs">
+            <h3>Data de Entrada:</h3>
+            <input type="date" name="data_entrada" id="data_entrada" placeholder="00/00/0000" required>
+          </div>
+
+          <div class="inputs">
+            <h3>Data de Saída:</h3>
+            <input type="date" name="data_saida" id="data_saida" placeholder="00/00/0000" required>
+          </div>
+        </div>
+
+        <div class="form_input_container">
+          <div class="inputs radio">
+            <h3 class="titulo">Tem férias vencidas?</h3>
+            <div class="radio__container">
+              <label for="ferias_sim">Sim:</label>
+              <input type="radio" name="ferias" id="ferias_sim">
+              <label for="ferias_nao">Não:</label>
+              <input type="radio" name="ferias" id="ferias_nao">
+            </div>
+          </div>
+
+          <div class="inputs radio">
+            <h3 class="titulo">Trabalhei no Aviso Prévio</h3>
+            <div class="radio__container">
+              <label for="aviso_sim">Sim:</label>
+              <input type="radio" name="ferias" id="aviso_sim">
+              <label for="aviso_nao">Não:</label>
+              <input type="radio" name="ferias" id="aviso_nao">
+            </div>
+          </div>
+
+          <div class="inputs radio" id="tipo_rescisao">
+            <h3 class="titulo_resisao">Tipo de Rescisão</h3>
+            <div class="class_tipo_rescisao">
+              
+              <div class="opcoes_rescisao">
+                <label for="sem_justa_causa">Demissão sem justa causa:</label>
+                <input type="radio" name="ferias" id="sem_justa_causa">
+              </div>
+
+              <div>
+                <label for="por_justa_causa">Demissão por justa causa:</label>
+                <input type="radio" name="ferias" id="por_justa_causa">
+              </div>
+
+              <div>
+                <label for="pedido_demissao">Pedido de demissão:</label>
+                <input type="radio" name="ferias" id="pedido_demissao">
+              </div>
+
+              <div>
+                <label for="culpa_reciproca">Rescisão por culpa recíproca:</label>
+                <input type="radio" name="ferias" id="culpa_reciproca">
+              </div>
+
+              <div>
+                <label for="comum_acordo">Demissão por comum acordo:</label>
+                <input type="radio" name="ferias" id="comum_acordo">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <button type="reset">Novo Cálculo</button>
+        <button type="button" id="botao" onclick="manipulaDOM()">Calcular minha rescisão</button>
+
+      </form>
+      <section class="mostra_resultado">
+        <div>
+          <p class="display">Total: <span id="resultado">R$</span></p>
+        </div>
+        <div>
+          <span class="calculation" id="saldo-salario">Saldo Salário: R$</span>
+          <span class="calculation" id="decimo-terceiro">Décimo Terceiro Proporcional: R$</span>
+          <span class="calculation" id="ferias-vencidas">Férias Vencidas: R$</span>
+          <span class="calculation" id="ferias-proporcionais">Férias Proporcionais: R$</span>
+          <span class="calculation" id="aviso-prévio-indenizado">Aviso Prévio Indenizado: R$</span>
+          <span class="calculation" id="multa-rescisoria">Multa Rescisória: R$</span>
+        </div>
+      </section>
+    </main>
+  </header>
+  <script src="./script.js"></script>
+</body>
+
+</html>
