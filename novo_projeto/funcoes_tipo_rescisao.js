@@ -54,6 +54,8 @@ function calculaDemissaoPorJustaCausa() {
     return demissaoSemJustaCausa.toFixed(2);
 }
 
+console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
+
 // console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
 
 // - Pedido de demissão
@@ -66,13 +68,19 @@ function calculaPedidoDeDemissao() {
 
     let saldoSalario = calculaSaldoSalario(salario, diasMes);
     let decimoTerceiroProporcional = calculaDecimoTerceiroProporcional(salario, mesesAno);
-    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasVencidas = 0;
     let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
+
+    if(possuiFeriasVencidas) {
+        feriasVencidas = calculaFeriasVencidas(salario);
+    }
 
     let pedidoDeDemissao = saldoSalario + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais;
 
     return pedidoDeDemissao.toFixed(2);
 }
+
+console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
 
 // console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
 
@@ -87,16 +95,26 @@ function calculaPedidoDeDemissao() {
 function calculaRescisaoPorCulpaReciproca() {
 
     let saldoSalario = calculaSaldoSalario(salario, diasMes);
-    let avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
+    let avisoPrevioIndenizado = 0;
     let decimoTerceiroProporcional = (calculaDecimoTerceiroProporcional(salario, mesesAno) / 2);
-    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasVencidas = 0;
     let feriasProporcionais = (calculaFeriasProporcionais(mesesAno, feriasVencidas) / 2);
     let multaRescisoria = (calculaMultaRescisoria(salario, totalDeMesesTrabalhados) / 5);
 
+    if(recebeAvisoPrevioIndenizado) {
+        avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
+    }
+
+    if(possuiFeriasVencidas) {
+        feriasVencidas = calculaFeriasVencidas(salario);
+    }
+    
     let rescisaoPorCulpaReciproca = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
 
     return rescisaoPorCulpaReciproca.toFixed(2);
 }
+
+console.log(`Pedido por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
 
 // console.log(`Rescisão por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
 
@@ -111,18 +129,26 @@ function calculaRescisaoPorCulpaReciproca() {
 function calculaDemissaoPorComumAcordo() {
 
     let saldoSalario = calculaSaldoSalario(salario, diasMes);
-    let avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
+    let avisoPrevioIndenizado = 0;
     let decimoTerceiroProporcional = calculaDecimoTerceiroProporcional(salario, mesesAno);
-    let feriasVencidas = calculaFeriasVencidas(salario);
+    let feriasVencidas = 0;
     let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
     let multaRescisoria = (calculaMultaRescisoria(salario, totalDeMesesTrabalhados) / 5);
+
+    if(recebeAvisoPrevioIndenizado) {
+        avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
+    }
+
+    if(possuiFeriasVencidas) {
+        feriasVencidas = calculaFeriasVencidas(salario);
+    }
 
     let demissaoPorComumAcordo = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
 
     return demissaoPorComumAcordo.toFixed(2);
 }
 
-// console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
+console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
 
 
 // funções auxiliares
