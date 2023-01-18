@@ -54,7 +54,7 @@ function calculaDemissaoPorJustaCausa() {
     return demissaoSemJustaCausa.toFixed(2);
 }
 
-console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
+// console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
 
 // console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
 
@@ -80,7 +80,7 @@ function calculaPedidoDeDemissao() {
     return pedidoDeDemissao.toFixed(2);
 }
 
-console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
+// console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
 
 // console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
 
@@ -114,7 +114,7 @@ function calculaRescisaoPorCulpaReciproca() {
     return rescisaoPorCulpaReciproca.toFixed(2);
 }
 
-console.log(`Pedido por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
+// console.log(`Pedido por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
 
 // console.log(`Rescisão por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
 
@@ -148,7 +148,7 @@ function calculaDemissaoPorComumAcordo() {
     return demissaoPorComumAcordo.toFixed(2);
 }
 
-console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
+// console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
 
 
 // funções auxiliares
