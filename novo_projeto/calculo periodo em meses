@@ -8,7 +8,8 @@ function calcular(inicio_trabalho, fim_trabalho){
     var total = (data2.getFullYear() - data1.getFullYear())*12 + (data2.getMonth() - data1.getMonth()); // realiza o calculo
 
     document.getElementById("total-de-meses-trabalhados").value = total; // coloca de volta no formulário
+    
+    
 }
 
 
-// ..
