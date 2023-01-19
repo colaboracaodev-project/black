@@ -60,42 +60,37 @@
             </div>
           </div>
 
-          <div class="inputs radio" id="tipo_rescisao">
-            <h3 class="titulo_resisao">Tipo de Rescisão</h3>
-            <div class="class_tipo_rescisao">
-              
-              <div class="opcoes_rescisao">
-                <label for="sem_justa_causa">Demissão sem justa causa:</label>
-                <input type="radio" name="ferias" id="sem_justa_causa">
+          <div class="tipos_rescisao">
+            <h3 class="titulo">Tipos de Rescisão</h3>
+            <div class="opcoes_container">
+              <div class="radio__container">
+                <label for="sem_justa_causa">Sem Justa Causa:</label>
+                <input type="radio" name="rescisao" id="sem_justa_causa" class="input_radio">
               </div>
-
-              <div>
-                <label for="por_justa_causa">Demissão por justa causa:</label>
-                <input type="radio" name="ferias" id="por_justa_causa">
+              <div class="radio__container">
+                <label for="com_justa_causa">Por Justa Causa:</label>
+                <input type="radio" name="rescisao" id="com_justa_causa" class="input_radio">
               </div>
-
-              <div>
-                <label for="pedido_demissao">Pedido de demissão:</label>
-                <input type="radio" name="ferias" id="pedido_demissao">
+              <div class="radio__container">
+                <label for="pedido_demissao">Pedido de Demissão:</label>
+                <input type="radio" name="rescisao" id="pedido_demissao" class="input_radio">
               </div>
-
-              <div>
-                <label for="culpa_reciproca">Rescisão por culpa recíproca:</label>
-                <input type="radio" name="ferias" id="culpa_reciproca">
+              <div class="radio__container">
+                <label for="culpa_reciproca">Culpa Recíproca:</label>
+                <input type="radio" name="rescisao" id="culpa_reciproca" class="input_radio">
               </div>
-
-              <div>
-                <label for="comum_acordo">Demissão por comum acordo:</label>
-                <input type="radio" name="ferias" id="comum_acordo">
+              <div class="radio__container">
+                <label for="comum_acordo">Comum Acordo:</label>
+                <input type="radio" name="rescisao" id="comum_acordo" class="input_radio">
               </div>
-
             </div>
           </div>
         </div>
 
-
-        <button type="reset">Novo Cálculo</button>
-        <button type="button" id="botao" onclick="manipulaDOM()">Calcular minha rescisão</button>
+        <div class="botoes">
+          <button type="reset" id="btn_reset">Novo Cálculo</button>
+          <button type="button" id="btn_calcular" onclick="manipulaDOM()">Calcular minha rescisão</button>
+        </div>
 
       </form>
       <section class="mostra_resultado">
