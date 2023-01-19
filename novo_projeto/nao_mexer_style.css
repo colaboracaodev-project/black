@@ -34,6 +34,7 @@ body {
 
 .header_container {
   width: 80%;
+  height: 100%;
   margin: auto;
   position: absolute;
   top: 50%;
@@ -94,7 +95,7 @@ input::placeholder {
 
 .tipos_rescisao {
   background-color: #1C1C1E;
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: 320px;
   height: 270px;
   text-align: center;
@@ -123,5 +124,29 @@ input::placeholder {
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
-  
+}
+
+.mostra_resultado {
+  text-align: center;
+}
+
+.mostra_resultado_container {
+  width: 82%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.resultado_cards {
+  background-color: #1C1C1E;
+  padding: 1rem;
+  width: 220px;
+  border-radius: 10px;
+  font-size: .8rem;
+  border: none;
+  border-left: 4px solid #3F46D2;
 }
