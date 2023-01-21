@@ -1,14 +1,29 @@
+function manipulaDOM() {
+    const salario = document.getElementById('salario').value;
+    const date1 = new Date(document.getElementById('start_date').value);
+    const date2 = new Date(document.getElementById('end_date').value);
+    const diasMes = date2.getDate() + 1;
+    // console.log(diasMes);
+    const mesesAno = date2.getMonth() + 1;
+    // console.log(mesesAno);
+    const totalDeMesesTrabalhados = calculaData(date1, date2);
+    const recebeAvisoPrevioIndenizado = true;
+    const possuiFeriasVencidas = true;
+
+    console.log(calculaDemissaoSemJustaCausa(salario, diasMes));
+}
+
 // variáveis base para teste
-const salario = document.getElementById('salario').value;
-const date1 = new Date(document.getElementById('start_date').value);
-const date2 = new Date(document.getElementById('end_date').value);
-const diasMes = date2.getDate()+1;
-// console.log(diasMes);
-const mesesAno = date2.getMonth()+1;
-// console.log(mesesAno);
-const totalDeMesesTrabalhados = calculaData(date1, date2);
-const recebeAvisoPrevioIndenizado = true;
-const possuiFeriasVencidas = true;
+// const salario = document.getElementById('salario').value;
+// const date1 = new Date(document.getElementById('start_date').value);
+// const date2 = new Date(document.getElementById('end_date').value);
+// const diasMes = date2.getDate()+1;
+// // console.log(diasMes);
+// const mesesAno = date2.getMonth()+1;
+// // console.log(mesesAno);
+// const totalDeMesesTrabalhados = calculaData(date1, date2);
+// const recebeAvisoPrevioIndenizado = true;
+// const possuiFeriasVencidas = true;
 
 // Regras das funções:
 
@@ -29,11 +44,11 @@ function calculaDemissaoSemJustaCausa() {
     let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
     let multaRescisoria = calculaMultaRescisoria(salario, totalDeMesesTrabalhados);
 
-    if(recebeAvisoPrevioIndenizado) {
+    if (recebeAvisoPrevioIndenizado) {
         avisoPrevioIndenizado = calculaAvisoPrevioIndenizado(salario);
     }
 
-    if(possuiFeriasVencidas) {
+    if (possuiFeriasVencidas) {
         feriasVencidas = calculaFeriasVencidas(salario);
     }
 
@@ -49,7 +64,7 @@ console.log(`Demissão sem Justa Causa R$ ${calculaDemissaoSemJustaCausa()}`);
 // férias vencidas, acrescidas de 1/3.
 
 function calculaDemissaoPorJustaCausa() {
-    
+
     let saldoSalario = calculaSaldoSalario(salario, diasMes);
     let feriasVencidas = calculaFeriasVencidas(salario);
 
@@ -75,7 +90,7 @@ function calculaPedidoDeDemissao() {
     let feriasVencidas = 0;
     let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
 
-    if(possuiFeriasVencidas) {
+    if (possuiFeriasVencidas) {
         feriasVencidas = calculaFeriasVencidas(salario);
     }
 
@@ -105,14 +120,14 @@ function calculaRescisaoPorCulpaReciproca() {
     let feriasProporcionais = (calculaFeriasProporcionais(mesesAno, feriasVencidas) / 2);
     let multaRescisoria = (calculaMultaRescisoria(salario, totalDeMesesTrabalhados) / 5);
 
-    if(recebeAvisoPrevioIndenizado) {
+    if (recebeAvisoPrevioIndenizado) {
         avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
     }
 
-    if(possuiFeriasVencidas) {
+    if (possuiFeriasVencidas) {
         feriasVencidas = calculaFeriasVencidas(salario);
     }
-    
+
     let rescisaoPorCulpaReciproca = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
 
     return rescisaoPorCulpaReciproca.toFixed(2);
@@ -139,11 +154,11 @@ function calculaDemissaoPorComumAcordo() {
     let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
     let multaRescisoria = (calculaMultaRescisoria(salario, totalDeMesesTrabalhados) / 5);
 
-    if(recebeAvisoPrevioIndenizado) {
+    if (recebeAvisoPrevioIndenizado) {
         avisoPrevioIndenizado = (calculaAvisoPrevioIndenizado(salario) / 2);
     }
 
-    if(possuiFeriasVencidas) {
+    if (possuiFeriasVencidas) {
         feriasVencidas = calculaFeriasVencidas(salario);
     }
 
