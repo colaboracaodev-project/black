@@ -100,15 +100,15 @@
       </div>
 
       <div class="buttons">
-        <button type="button" class="btn" onclick="manipulaDOM()">Novo cálculo</button>
-        <button type="button" class="btn" onclick="manipulaDOM()">Calcular minha rescisão</button>
+        <button type="reset" class="btn">Novo cálculo</button>
+        <button type="button" class="btn" onclick="main()">Calcular minha rescisão</button>
       </div>
     </form>
 
     <div class="results">
       <div class="total">
         <p>Total a receber: </p>
-        <span>R$ 9.500,00</span>
+        <p>R$ <span id="total">9.500,00</span></p>
       </div>
       <ul class="cards-result">
         <li class="card-result">

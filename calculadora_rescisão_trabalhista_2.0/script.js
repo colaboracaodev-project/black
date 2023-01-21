@@ -1,67 +1,44 @@
-function manipulaDOM() {
-    const salario = document.getElementById('salario').value;
-    const date1 = new Date(document.getElementById('start_date').value);
-    const date2 = new Date(document.getElementById('end_date').value);
-    const diasMes = date2.getDate() + 1;
-    // console.log(diasMes);
-    const mesesAno = date2.getMonth() + 1;
-    // console.log(mesesAno);
-    const totalDeMesesTrabalhados = calculaData(date1, date2);
-    const recebeAvisoPrevioIndenizado = true;
-    const possuiFeriasVencidas = true;
+const salarioInput = document.getElementById('salario').value;
+const dataEntrada = new Date(document.getElementById('start_date').value);
+const dataSaida = new Date(document.getElementById('end_date').value);
+const diasMes = dataEntrada.getDate() + 1;
+const mesesAno = dataSaida.getMonth() + 1;
+const totalDeMesesTrabalhados = parseInt(calculaData(dataEntrada, dataSaida));
+const recebeAvisoPrevioIndenizado = true;
+const possuiFeriasVencidas = true;
 
-    console.log(calculaDemissaoSemJustaCausa(salario, diasMes));
+function main() {
+    // const total = document.getElementById('total');
+    const resultado = calculaDemissaoSemJustaCausa(salarioInput,diasMes,mesesAno,totalDeMesesTrabalhados);
+    // total.innerHTML = resultado.toFixed(2);
 }
 
-// variáveis base para teste
-// const salario = document.getElementById('salario').value;
-// const date1 = new Date(document.getElementById('start_date').value);
-// const date2 = new Date(document.getElementById('end_date').value);
-// const diasMes = date2.getDate()+1;
-// // console.log(diasMes);
-// const mesesAno = date2.getMonth()+1;
-// // console.log(mesesAno);
-// const totalDeMesesTrabalhados = calculaData(date1, date2);
-// const recebeAvisoPrevioIndenizado = true;
-// const possuiFeriasVencidas = true;
 
-// Regras das funções:
+function calculaDemissaoSemJustaCausa(salario,diasMes,mesesAno,totalDeMesesTrabalhados) {
+    console.log(`salario ${salario} diasMes ${diasMes} mesesAno ${mesesAno} mesesTrabalhados ${totalDeMesesTrabalhados}`);
 
-// - Demissão sem justa causa
-// saldo de salário;
-// aviso prévio;
-// 13ª terceiro salário proporcional;
-// férias vencidas, acrescidas do adicional de 1/3;
-// férias proporcionais, acrescidas do adicional de 1/3;
-// multa de 40% do FGTS.
-
-function calculaDemissaoSemJustaCausa() {
-
-    let saldoSalario = calculaSaldoSalario(salario, diasMes);
+    let saldoSalario = parseFloat(calculaSaldoSalario(salario, diasMes));
     let avisoPrevioIndenizado = 0;
-    let decimoTerceiroProporcional = calculaDecimoTerceiroProporcional(salario, mesesAno);
+    let decimoTerceiroProporcional = parseFloat(calculaDecimoTerceiroProporcional(salario, mesesAno));
     let feriasVencidas = 0;
-    let feriasProporcionais = calculaFeriasProporcionais(mesesAno, feriasVencidas);
-    let multaRescisoria = calculaMultaRescisoria(salario, totalDeMesesTrabalhados);
+    let feriasProporcionais = parseFloat(calculaFeriasProporcionais(mesesAno, feriasVencidas));
+    let multaRescisoria = parseFloat(calculaMultaRescisoria(salario, totalDeMesesTrabalhados));
 
     if (recebeAvisoPrevioIndenizado) {
-        avisoPrevioIndenizado = calculaAvisoPrevioIndenizado(salario);
+        avisoPrevioIndenizado = parseFloat(calculaAvisoPrevioIndenizado(salario));
     }
 
     if (possuiFeriasVencidas) {
-        feriasVencidas = calculaFeriasVencidas(salario);
+        feriasVencidas = parseFloat(calculaFeriasVencidas(salario));
     }
 
-    let demissaoSemJustaCausa = saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria;
+    let demissaoSemJustaCausa = (saldoSalario + avisoPrevioIndenizado + decimoTerceiroProporcional + feriasVencidas + feriasProporcionais + multaRescisoria);
 
-    return demissaoSemJustaCausa.toFixed(2);
+    console.log(demissaoSemJustaCausa);
+
+    return demissaoSemJustaCausa;
 }
 
-console.log(`Demissão sem Justa Causa R$ ${calculaDemissaoSemJustaCausa()}`);
-
-// - Demissão com justa causa
-// saldo de salários;
-// férias vencidas, acrescidas de 1/3.
 
 function calculaDemissaoPorJustaCausa() {
 
@@ -73,15 +50,6 @@ function calculaDemissaoPorJustaCausa() {
     return demissaoSemJustaCausa.toFixed(2);
 }
 
-// console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
-
-// console.log(`Demissão por Justa Causa R$ ${calculaDemissaoPorJustaCausa()}`);
-
-// - Pedido de demissão
-// saldo de salário;
-// 13ª terceiro salário proporcional;
-// férias vencidas, acrescidas do adicional de 1/3;
-// férias proporcionais, acrescidas do adicional de 1/3.
 
 function calculaPedidoDeDemissao() {
 
@@ -99,17 +67,6 @@ function calculaPedidoDeDemissao() {
     return pedidoDeDemissao.toFixed(2);
 }
 
-// console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
-
-// console.log(`Pedido de Demissão R$ ${calculaPedidoDeDemissao()}`);
-
-// - Rescisão por culpa recíproca
-// saldo de salário;
-// metade do aviso prévio;
-// metade do 13º salário proporcional;
-// férias vencidas, acrescidas de 1/3, se houver;
-// metade das férias proporcionais, acrescidas de 1/3;
-// indenização de 20% dos depósitos do FGTS.
 
 function calculaRescisaoPorCulpaReciproca() {
 
@@ -133,17 +90,6 @@ function calculaRescisaoPorCulpaReciproca() {
     return rescisaoPorCulpaReciproca.toFixed(2);
 }
 
-// console.log(`Pedido por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
-
-// console.log(`Rescisão por Culpa Recíproca R$ ${calculaRescisaoPorCulpaReciproca()}`);
-
-// - Demissão por comum acordo
-// saldo de salário;
-// metade do aviso prévio;
-// 13º salário proporcional;
-// férias vencidas, acrescidas de 1/3;
-// férias proporcionais, acrescidas de 1/3;
-// multa de 20% do FGTS.
 
 function calculaDemissaoPorComumAcordo() {
 
@@ -166,8 +112,6 @@ function calculaDemissaoPorComumAcordo() {
 
     return demissaoPorComumAcordo.toFixed(2);
 }
-
-// console.log(`Demissão por Comum Acordo R$ ${calculaDemissaoPorComumAcordo()}`);
 
 
 // funções auxiliares
@@ -201,12 +145,6 @@ function calculaMultaRescisoria(salario, totalDeMesesTrabalhados) {
     let totalContribuicaoFGTS = depositoMensalFGTS * totalDeMesesTrabalhados;
     let multaRescisoria = totalContribuicaoFGTS * 0.4;
     return multaRescisoria;
-}
-
-function calculaTotal(saldoSalario, feriasVencidas, feriasProporcionais, decimoTerceiroProporcional, avisoPrevioIndenizado, multaRescisoria) {
-    let total = saldoSalario + feriasVencidas + feriasProporcionais + decimoTerceiroProporcional + avisoPrevioIndenizado + multaRescisoria;
-    console.log(typeof (total));
-    return total.toFixed(2);
 }
 
 function calculaData(date1, date2) {
