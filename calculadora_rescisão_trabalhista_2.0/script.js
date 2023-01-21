@@ -1,8 +1,10 @@
 // variáveis base para teste
-const salario = document.getElementById('salario').value;
+const salario = 4700;
+const date1 = new Date('2017-03-17');
+const date2 = new Date('2022-03-17');
 const diasMes = 20;
 const mesesAno = 10;
-const totalDeMesesTrabalhados = 30;
+const totalDeMesesTrabalhados = calculaData(date1, date2);
 const recebeAvisoPrevioIndenizado = true;
 const possuiFeriasVencidas = true;
 
@@ -188,4 +190,13 @@ function calculaTotal(saldoSalario, feriasVencidas, feriasProporcionais, decimoT
     let total = saldoSalario + feriasVencidas + feriasProporcionais + decimoTerceiroProporcional + avisoPrevioIndenizado + multaRescisoria;
     console.log(typeof (total));
     return total.toFixed(2);
+}
+
+function calculaData(date1, date2) {
+    let start = Math.floor(date1 / (3600 * 24 * 1000));
+    let end = Math.floor(date2 / (3600 * 24 * 1000));
+
+    let daysDiff = end - start;
+    let monthDiff = daysDiff / 30;
+    return monthDiff.toFixed();
 }
