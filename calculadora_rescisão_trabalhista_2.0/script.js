@@ -1,9 +1,11 @@
 // variáveis base para teste
-const salario = 4700;
-const date1 = new Date('2017-03-17');
-const date2 = new Date('2022-03-17');
-const diasMes = 20;
-const mesesAno = 10;
+const salario = document.getElementById('salario').value;
+const date1 = new Date(document.getElementById('start_date').value);
+const date2 = new Date(document.getElementById('end_date').value);
+const diasMes = date2.getDate()+1;
+// console.log(diasMes);
+const mesesAno = date2.getMonth()+1;
+// console.log(mesesAno);
 const totalDeMesesTrabalhados = calculaData(date1, date2);
 const recebeAvisoPrevioIndenizado = true;
 const possuiFeriasVencidas = true;
