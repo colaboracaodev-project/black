@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter');
+
+*{
+    background-color: #0e0e0f;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter';
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 20px;
+}
+
+header > .title{
+    display: flex;
+    color: white;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.title > img{
+    height: 69.4px;
+    width: 128px;
+}
+
+header > .subtitle{
+    font-size: 30px;
+    display: flex;
+    color: white;
+}
+
+h3 > span{
+    background-color: black;
+    width: 126px;
+    height: 56px;
+    border-radius: 50px;
+    border: solid 1px white;
+    padding: 16px 32px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+header > .subtitle-1{
+    display: flex;
+    color: white;
+    gap: 20px;
+    margin-bottom: 20PX;
+}
+
+.subtitle-1 > img{
+    margin-top: 20px;
+    width: 26.32px;
+    height: 26.32px;
+}
+
+.container-1, .container-2{
+    display: flex;
+    align-items: center;
+    color: white;  
+}
+
+.container-1 > .cards{
+    display: flex;
+    gap: 30px;
+}
+
+.container-2 > .cards{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cards > .card-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 320px;
+    gap: 30px;
+    background-color: #1C1C1E;
+    border-radius: 5px;
+}
+
+.card-input > label, ::placeholder, input{
+    background-color: #1C1C1E;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-input > input{
+    border-bottom: solid 3px #3F46D2;
+    width: 50%;
+}
+
+.card-input > .select{
+    display: flex;
+}
+
+.select > .select-option, label{
+    background-color: #1C1C1E;
+    font-size: 20px;
+}
+
+.select-option > input{
+    height: 24px;
+    width: 24px;
+}
+
+.select-option > label{
+    margin-right: 20px;
+}
+
+#nao-ferias-vencidas, #sim-ferias-vencidas{
+    margin-right: 10px;
+}
+
+.rescisao > .tipoRescisao{
+    background-color: #1C1C1E;
+    margin-top: -15px;    
+}
+
+.tipoRescisao > input{
+    width: 20px;
+    height: 20px;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 16px;
+}
+
+.botoes{
+    background-color: #3F46D2;
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    height: 40px;
+}
+
+@media(max-width: 1050px){
+
+    .container-1 > .cards{
+        justify-content: center;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .container-2 > .cards{
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 600px){
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > .title{
+        font-size: 10px;
+        gap: 0px;
+    }
+
+    header > .subtitle{
+        font-size: 15px;
+    }
+    
+    h3 > span{
+        background-color: black;
+        width: 63px;
+        height: 28px;
+        padding: 8px 16px;
+        margin-left: 5px;
+        font-size: 10px;
+    }
+
+    header > .subtitle-1{
+        gap: 10px;
+        margin-bottom: 10PX;
+        font-size: 10px;
+    }
+    
+    .subtitle-1 > img{
+        margin-top: 15px;
+        width: 13.16px;
+        height: 13.16px;
+    }
+
+    .container-1 > .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .container-2 > .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+}
