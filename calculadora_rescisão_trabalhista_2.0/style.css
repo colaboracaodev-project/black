@@ -51,13 +51,15 @@ header .team {
 header .team span {
   padding: 16px 32px;
   text-align: center;
-  background: #49ab52;
+  background: #000;
   border-radius: 50px;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: var(--bg-team-black);
+  color: #fff;
+  border: 3px solid #fff;
 }
+
 main {
   padding-inline: 26px;
 }
