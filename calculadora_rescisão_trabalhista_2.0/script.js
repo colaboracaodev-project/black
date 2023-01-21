@@ -25,6 +25,13 @@ function main() {
     const total = document.getElementById('total');
     const resultado = calculaDemissaoSemJustaCausa(salarioDigitado, diasMes, mesesAno, totalDeMesesTrabalhados,recebeAvisoPrevioIndenizado,possuiFeriasVencidas);
     total.innerHTML = resultado.toFixed(2);
+
+    const saldoSalarioCalculado = document.getElementById('salarioProporcionalCalculado');
+    const avisoPrevioIndenizadoCalculado = document.getElementById('avisoPrevioCalculado');
+    const decimoTerceiroProporcionalCalculado = document.getElementById('decimoTerceiroCalculado');
+    const feriasVencidasCalculada = document.getElementById('feriasVencidasCalculada');
+    const feriasProporcionaisCalculada = document.getElementById('feriasProporcionalCalculada');
+    const multaRescisoriaCalculada = document.getElementById('multaRescisoriaCalculada');
 }
 
 function calculaDemissaoSemJustaCausa(salario, diasMes, mesesAno, totalDeMesesTrabalhados,recebeAvisoPrevioIndenizado,possuiFeriasVencidas) {
