@@ -1,17 +1,3 @@
-// function main() {
-//     const salarioDigitado = document.getElementById('salario').value;
-//     const dataEntrada = new Date(document.getElementById('start_date').value);
-//     const dataSaida = new Date(document.getElementById('end_date').value);
-//     const diasMes = dataEntrada.getDate() + 1;
-//     const mesesAno = dataSaida.getMonth() + 1;
-//     const totalDeMesesTrabalhados = parseInt(calculaData(dataEntrada, dataSaida));
-//     const recebeAvisoPrevioIndenizado = true;
-//     const possuiFeriasVencidas = true;
-
-//     const resultado = calculaDemissaoSemJustaCausa(salarioDigitado, diasMes, mesesAno, totalDeMesesTrabalhados,recebeAvisoPrevioIndenizado,possuiFeriasVencidas);
-//     console.log(resultado.toFixed(2));
-// }
-
 function main() {
     const salarioDigitado = 1000;
     const dataEntrada = new Date('2020-01-01');
@@ -34,6 +20,7 @@ function main() {
     const multaRescisoriaCalculada = document.getElementById('multaRescisoriaCalculada');
 }
 
+// funções que calculam o tipo de rescisão
 function calculaDemissaoSemJustaCausa(salario, diasMes, mesesAno, totalDeMesesTrabalhados,recebeAvisoPrevioIndenizado,possuiFeriasVencidas) {
     console.log(`salario ${salario} diasMes ${diasMes} mesesAno ${mesesAno} mesesTrabalhados ${totalDeMesesTrabalhados}`);
 
