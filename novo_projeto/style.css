@@ -23,6 +23,7 @@ body {
   background-color: var(--bg-grey-900);
   min-height: 100vh;
 }
+
 header {
   padding-block: 40px;
   display: flex;
@@ -30,6 +31,7 @@ header {
   align-items: center;
   flex-direction: column;
 }
+
 header .head-logo {
   display: flex;
   align-items: center;
@@ -39,6 +41,7 @@ header .head-logo {
   color: var(--bg-contrast-light);
   gap: 35px;
 }
+
 header .team {
   display: flex;
   gap: 16px;
@@ -48,6 +51,7 @@ header .team {
   line-height: 39px;
   color: var(--bg-contrast-light);
 }
+
 header .team span {
   padding: 16px 32px;
   text-align: center;
@@ -73,6 +77,7 @@ main {
   border-radius: 10px;
   margin-bottom: 40px;
 }
+
 #form .title {
   display: flex;
   gap: 16px;
@@ -80,6 +85,7 @@ main {
   justify-content: center;
   margin-bottom: 40px;
 }
+
 #form .title h1 {
   font-weight: 500;
   font-size: 36px;
@@ -92,6 +98,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px 52px;
 }
+
 .card-input {
   display: flex;
   flex-direction: column;
@@ -102,12 +109,14 @@ main {
   border-radius: 8px;
   padding: 32px 32px;
 }
+
 .card-input label {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #fff;
 }
+
 .card-input input {
   border: none;
   position: relative;
@@ -118,6 +127,7 @@ main {
   text-align: center;
   border-bottom: 4px solid #3f46d2;
 }
+
 .card-input input::placeholder {
   color: var(--bg-contrast-light);
 }
@@ -141,16 +151,20 @@ main {
   height: 24px;
   background-color: #020222;
 }
+
 .card-input input[type="radio"]:checked {
   background-color: #020222;
 }
+
 .card-input .radio-buttons {
   display: flex;
   gap: 32px;
 }
+
 .card-input .radio-buttons.rescisao {
   flex-direction: column;
 }
+
 .card-input .radio-buttons.rescisao .radio-option label {
   font-weight: 400;
   font-size: 18px;
@@ -162,6 +176,7 @@ main {
   align-items: center;
   gap: 8px;
 }
+
 .card-input p {
   font-weight: 400;
   font-size: 20px;
@@ -174,6 +189,7 @@ main {
   margin-top: 24px;
   gap: 16px;
 }
+
 .btn {
   padding: 16px 32px;
   background: var(--bg-blue-500);
@@ -203,7 +219,9 @@ main {
   padding-block: 32px;
   margin-bottom: 40px;
   border: 4px solid var(--bg-feedback-sucess);
+  visibility: hidden;
 }
+
 .results .total {
   display: flex;
   justify-content: center;
@@ -214,6 +232,7 @@ main {
   line-height: 39px;
   color: #fafafa;
 }
+
 .results .cards-result {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
@@ -223,6 +242,7 @@ main {
   margin: 0 auto;
   padding-inline: 42px;
 }
+
 .results .cards-result .card-result {
   padding: 10px 16px;
   background: var(--bg-grey-900);
@@ -239,6 +259,7 @@ main {
 .results .cards-result .card-result span {
   font-size: 14px;
 }
+
 .results .cards-result .card-result p {
   font-size: 16px;
 }
@@ -251,17 +272,20 @@ main {
     line-height: 39px;
     gap: 20px;
   }
+
   #form .title h1 {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
   }
 }
+
 @media (max-width: 460px) {
   #form .title h1 {
     max-width: 205px;
   }
 }
+
 @media (max-width: 620px) {
   .buttons {
     margin-top: 40px;
@@ -270,6 +294,7 @@ main {
     margin-inline: auto;
     max-width: 300px;
   }
+
   .results .total {
     font-size: 20px;
     line-height: 24px;
