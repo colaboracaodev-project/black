@@ -155,3 +155,5 @@ function calculaData(date1, date2) {
     let monthDiff = daysDiff / 30;
     return monthDiff.toFixed();
 }
+
+..
