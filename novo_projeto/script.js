@@ -39,6 +39,9 @@ function main() {
   );
 
   aparecerResultado();
+  pegarFeriasVencidasChecked();
+  pegarAvisoPrevioChecked();
+  pegarMotivoDaRescisaoChecked();
 }
 
 // funções que calculam o tipo de rescisão
@@ -243,4 +246,66 @@ function aparecerResultado() {
 
 function ocultarResultado() {
   document.querySelector(".results").style.visibility = "hidden";
+}
+
+function pegarFeriasVencidasChecked() {
+  let feriasVencidas = document.getElementsByName("ferias-vencidas");
+
+  var choices = [];
+  for (var i = 0; i < feriasVencidas.length; i++) {
+    if (feriasVencidas[i].checked) {
+      choices.push(feriasVencidas[i].value);
+    }
+  }
+
+  if (choices[0] === "nao-ferias-vencias") {
+    console.log("Não férias vencidas");
+  } else if (choices[0] === "sim-ferias-vencias") {
+    console.log("Sim férias vencidas");
+  }
+
+  console.log(choices);
+}
+
+function pegarAvisoPrevioChecked() {
+  let avisoPrevio = document.getElementsByName("aviso-previo");
+
+  var choices = [];
+  for (var i = 0; i < avisoPrevio.length; i++) {
+    if (avisoPrevio[i].checked) {
+      choices.push(avisoPrevio[i].value);
+    }
+  }
+
+  if (choices[0] === "nao-aviso-previo") {
+    console.log("Não aviso prévio");
+  } else if (choices[0] === "sim-aviso-previo") {
+    console.log("Sim aviso previo");
+  }
+
+  console.log(choices);
+}
+
+function pegarMotivoDaRescisaoChecked() {
+  var motivoRescisao = document.getElementsByName("motivo-rescisao");
+
+  var choices = [];
+  for (var i = 0; i < motivoRescisao.length; i++) {
+    if (motivoRescisao[i].checked) {
+      choices.push(motivoRescisao[i].value);
+    }
+  }
+
+  if (choices[0] === "sem-justa-causa") {
+    console.log("Sem justa causa");
+  } else if (choices[0] === "com-justa-causa") {
+    console.log("Com justa causa");
+  } else if (choices[0] === "pedido-de-demissao") {
+    console.log("Pedido de demissão");
+  } else if (choices[0] === "reciproca") {
+    console.log("Reciproca");
+  } else if (choices[0] === "acordo") {
+    console.log("Acordo");
+  }
+  console.log(choices);
 }
